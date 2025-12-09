@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthTrack — SDG 3 Good Health & Well-Being</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<header>
+  <nav class="navbar">
+    <h1 class="logo">HealthTrack</h1>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="history.html">History</a>
+      <a href="tips.html">Tips</a>
+      <a href="resources.html">Resources</a>
+    </div>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+
+  <!-- ABOUT / HOW TO USE -->
+  <section class="card">
+    <h2>About HealthTrack</h2>
+    <p>
+      HealthTrack is a simple wellness tracking website designed to support
+      <strong>United Nations SDG 3: Good Health and Well-Being</strong>.
+      It helps users become more aware of their daily health habits such as
+      sleep, physical activity, water intake, and mood.
+    </p>
+
+    <h3>How to Use This Website</h3>
+    <ol>
+      <li>Select the date of your health record.</li>
+      <li>Enter your hours of sleep.</li>
+      <li>Enter the minutes you exercised.</li>
+      <li>Enter how many cups of water you drank.</li>
+      <li>Select your mood for the day.</li>
+      <li>Click <strong>Save Entry</strong> to store your data.</li>
+      <li>View your saved records on the <strong>History</strong> page.</li>
+    </ol>
+
+    <p>
+      The information you enter is saved only in your browser using local storage
+      and is used to help you monitor and improve your daily well-being.
+    </p>
+  </section>
+
+  <!-- INPUT FORM -->
+  <section class="card">
+    <h2>Add Daily Health Entry</h2>
+
+    <form id="entryForm">
+      <label for="date">Date</label>
+      <input type="date" id="date" required />
+
+      <label for="sleep">Sleep (hours)</label>
+      <input type="number" id="sleep" min="0" step="0.5" required />
+
+      <label for="exercise">Exercise (minutes)</label>
+      <input type="number" id="exercise" min="0" required />
+
+      <label for="water">Water Intake (cups)</label>
+      <input type="number" id="water" min="0" required />
+
+      <label for="mood">Mood</label>
+      <select id="mood" required>
+        <option value="Very Good">Very Good</option>
+        <option value="Good">Good</option>
+        <option value="Okay">Okay</option>
+        <option value="Bad">Bad</option>
+      </select>
+
+      <button type="submit" class="primary">Save Entry</button>
+    </form>
+
+    <div id="feedback"></div>
+  </section>
+
+  <!-- SNAPSHOT -->
+  <section class="card">
+    <h2>Latest Health Summary</h2>
+    <div id="snapshot">No entries yet.</div>
+  </section>
+
+</main>
+
+<!-- JAVASCRIPT -->
+<script src="script.js" defer></script>
+
+</body>
+</html>
